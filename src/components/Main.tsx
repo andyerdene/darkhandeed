@@ -1,23 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import mainPic from "../images/pictures/pic1.png";
 import "../style/main.css";
 import partTwoPic from "../images/pictures/part-two-pic.png";
 import { Carousel } from "react-bootstrap";
+import { images } from "../services/otherServices";
+import { functions } from "../init-firebase";
+
 type Props = {};
 
 export default function Main({}: Props) {
+  const [image, setImage] = useState<string[]>();
+
+  // useEffect(() => {
+  //   functions.getSlideImages().then((e) => {
+  //     setImage(e);
+  //   });
+  // }, []);
+  useEffect(() => {
+    // functions.getAllNews().then((e) => setNews);
+  }, []);
   return (
-    <div>
-      <div className="carausel">
-        <Carousel>
+    <div className="order-1">
+      {/* {functions.getSlideImages()} */}
+      <div className="carausel order-1">
+        <Carousel className="order-1">
           <Carousel.Item>
             <img
               className="d-block w-100 h-30"
-              src="pictures/1.jpeg"
+              src={images.slide.image1}
               alt="First slide"
             />
             <Carousel.Caption>
-              <img src="pictures/logo_name.png" alt="" />
+              <img src={images.other.slideLogo} alt="" />
               <h3>First slide label</h3>
 
               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -26,7 +40,7 @@ export default function Main({}: Props) {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="pictures/2.jpeg"
+              src={images.slide.image2}
               alt="Second slide"
             />
 
@@ -38,7 +52,7 @@ export default function Main({}: Props) {
           <Carousel.Item>
             <img
               className="d-block w-100 h-30"
-              src="pictures/3.jpeg"
+              src={images.slide.image3}
               alt="Third slide"
             />
 
@@ -55,6 +69,7 @@ export default function Main({}: Props) {
         <div className="headerContent contents">
           <div>
             <h1>We build scaleable & smart solutions</h1>
+            <img src={image ? image[0] : ""} alt="" />
             <p>
               We are passionate about creating outstanding software solutions
               that create value for your business and lead to success

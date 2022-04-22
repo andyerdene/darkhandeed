@@ -2,6 +2,7 @@
   "name": "temp1",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://andyerdene.github.io/darkhandeed/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
@@ -11,6 +12,7 @@
     "@types/react": "^17.0.43",
     "@types/react-dom": "^17.0.14",
     "bootstrap": "^5.1.3",
+    "firebase": "^9.6.11",
     "react": "^17.0.2",
     "react-bootstrap": "^2.2.3",
     "react-dom": "^17.0.2",
@@ -23,7 +25,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "main -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -42,5 +46,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }

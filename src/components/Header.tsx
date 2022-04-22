@@ -9,7 +9,7 @@ type Props = {};
 
 function Header({}: Props) {
   return (
-    <div className="headerBG">
+    <div className="headerBG order-10">
       <div className="contents header">
         <a href="/" id="logo">
           <img src="main_logo.png" alt="" />

@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/darkhandeed/static/css/main.1ae0cc86.css",
+    "main.js": "/darkhandeed/static/js/main.b2c2863a.js",
+    "static/js/787.52fe08d9.chunk.js": "/darkhandeed/static/js/787.52fe08d9.chunk.js",
+    "static/media/pic1.png": "/darkhandeed/static/media/pic1.21cfadf1c18ac7459e39.png",
+    "static/media/part-two-pic.png": "/darkhandeed/static/media/part-two-pic.d6c66503094de96eea92.png",
+    "static/media/background-2.png": "/darkhandeed/static/media/background-2.33f04b0de70fb2d0206e.png",
+    "index.html": "/darkhandeed/index.html",
+    "main.1ae0cc86.css.map": "/darkhandeed/static/css/main.1ae0cc86.css.map",
+    "main.b2c2863a.js.map": "/darkhandeed/static/js/main.b2c2863a.js.map",
+    "787.52fe08d9.chunk.js.map": "/darkhandeed/static/js/787.52fe08d9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ae0cc86.css",
+    "static/js/main.b2c2863a.js"
+  ]
+}
