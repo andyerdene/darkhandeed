@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import mainPic from "../images/pictures/pic1.png";
 import "../style/main.css";
 import partTwoPic from "../images/pictures/part-two-pic.png";
