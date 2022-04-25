@@ -1,7 +1,5 @@
 import React from "react";
 
-type Props = {};
-
-export default function Prices({}: Props) {
+export default function Prices() {
   return <div>Prices</div>;
 }

@@ -7,15 +7,13 @@ import { images } from "../services/otherServices";
 import { useNews } from "../contexts/NewsContext";
 import SingleNews from "./SingleNews";
 
-type Props = {};
-
 interface News {
   title: string;
   body: string;
   images: string[];
 }
 
-export default function Main({}: Props) {
+export default function Main() {
   const [image, setImage] = useState<string[]>();
   const news = useNews();
 
