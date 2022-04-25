@@ -4,12 +4,20 @@ import "../style/main.css";
 import partTwoPic from "../images/pictures/part-two-pic.png";
 import { Carousel } from "react-bootstrap";
 import { images } from "../services/otherServices";
-import { functions } from "../init-firebase";
+import { useNews } from "../contexts/NewsContext";
+import SingleNews from "./SingleNews";
 
 type Props = {};
 
+interface News {
+  title: string;
+  body: string;
+  images: string[];
+}
+
 export default function Main({}: Props) {
   const [image, setImage] = useState<string[]>();
+  const news = useNews();
 
   // useEffect(() => {
   //   functions.getSlideImages().then((e) => {
@@ -108,6 +116,11 @@ export default function Main({}: Props) {
           </div>
         </div>
         <div className="part-three">
+          {news?.map((data: News) => (
+            <SingleNews {...data} key={data.body} />
+          ))}
+        </div>
+        <div className="part-four">
           <div className="texts">
             <h2>Mobile Applications</h2>
             <p>

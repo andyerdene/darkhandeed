@@ -35,7 +35,7 @@
   font-size: 40px;
   color: rgb(112, 112, 112);
 }
-.part-two {
+.part-three {
   align-items: center;
   height: 100vh;
   background: linear-gradient(
@@ -46,23 +46,23 @@
   );
   display: flex;
 }
-.part-two img {
+.part-three img {
   margin-top: 40px;
   width: 60%;
   height: auto;
 }
-.part-two div {
+.part-three div {
   color: rgb(207, 115, 103);
   font-family: "Poppins", sans-serif;
   font-size: 25px;
   width: 40%;
 }
-.part-two div p {
+.part-three div p {
   color: rgb(80, 79, 79);
   font-size: 20px;
   padding-right: 40px;
 }
-.part-three {
+.part-four {
   height: 100vh;
   background-color: #29243b;
   background-image: url("../images/pictures/background-2.png");

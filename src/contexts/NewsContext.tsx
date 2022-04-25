@@ -20,10 +20,10 @@ export default function NewsProvider(props: any) {
       .then((querySnapshot) => {
         let newsData: News[] = [];
         querySnapshot.forEach((doc) => {
-          const gsReference = ref(getStorage(), doc.data().image[0]);
-          getDownloadURL(gsReference).then((e) =>
-            console.log("image url = ", e)
-          );
+          // const gsReference = ref(getStorage(), doc.data().image[0]);
+          // getDownloadURL(gsReference).then((e) => {
+          //   console.log("image url = ", e);
+          // });
           newsData.push({
             title: doc.data().title,
             body: doc.data().body,
