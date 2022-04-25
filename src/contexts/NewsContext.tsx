@@ -1,5 +1,4 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { getStorage, ref, getMetadata, getDownloadURL } from "firebase/storage";
 import { functions } from "../init-firebase";
 interface News {
   title: string;

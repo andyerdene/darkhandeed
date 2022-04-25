@@ -1,10 +1,6 @@
 import React from "react";
 import "../style/footer.css";
 
-type Props = {
-  id: number;
-};
-
 export default function Footer() {
   return (
     <div className="footer">

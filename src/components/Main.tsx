@@ -14,7 +14,6 @@ interface News {
 }
 
 export default function Main() {
-  const [image, setImage] = useState<string[]>();
   const news = useNews();
 
   // useEffect(() => {
@@ -75,7 +74,6 @@ export default function Main() {
         <div className="headerContent contents">
           <div>
             <h1>We build scaleable & smart solutions</h1>
-            <img src={image ? image[0] : ""} alt="" />
             <p>
               We are passionate about creating outstanding software solutions
               that create value for your business and lead to success

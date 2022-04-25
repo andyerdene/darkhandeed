@@ -7,7 +7,7 @@ import {
   getFirestore,
   getDocs,
 } from "firebase/firestore";
-import { getStorage, ref, getMetadata, getDownloadURL } from "firebase/storage";
+import { getStorage, ref, getDownloadURL } from "firebase/storage";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -39,9 +39,6 @@ async function AddingData(data) {
 async function getSlideImages() {
   // Create a reference to the file whose metadata we want to retrieve
   const storage = getStorage();
-  const im1 = ref(storage, "Slide/1.jpeg");
-  const im2 = ref(storage, "Slide/2.jpeg");
-  const im3 = ref(storage, "Slide/3.jpeg");
   const images = [
     await getDownloadURL(ref(storage, "Slide/1.jpeg")),
     await getDownloadURL(ref(storage, "Slide/2.jpeg")),
