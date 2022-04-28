@@ -9,13 +9,7 @@ export default function Login() {
     e.preventDefault();
     const auth = getAuth();
     signInWithEmailAndPassword(auth, e.target[0].value, e.target[1].value)
-      .then((userCredential) => {
-        // Signed in
-        console.log("==", userCredential.user);
-        // setUser({
-        //   user: userCredential.user || {}
-        // });
-      })
+      .then((userCredential) => {})
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;

@@ -5,29 +5,22 @@ import partTwoPic from "../images/pictures/part-two-pic.png";
 import { Carousel } from "react-bootstrap";
 import { images } from "../services/otherServices";
 import { useNews } from "../contexts/NewsContext";
+import useFetch from "../customHooks/useFetch";
+import NewsCard from "./NewsCard";
 import SingleNews from "./SingleNews";
 import { fetchService } from "../services/otherServices";
 interface News {
-  title: string;
-  body: string;
-  images: string[];
+  id: number;
+  attribute: {
+    title: string;
+    body: string;
+    images: string[];
+  };
 }
 
 export default function Main() {
-  // const news = useNews();
-  const [news, setNews] = useState([]);
-
-  // useEffect(() => {
-  //   functions.getSlideImages().then((e) => {
-  //     setImage(e);
-  //   });
-  // }, []);
-  useEffect(() => {
-    // functions.getAllNews().then((e) => setNews);
-    fetchService("http://localhost:1337/api/posts")
-      .then((response) => response.json())
-      .then((data) => setNews(data.data));
-  }, []);
+  const { loading, error, data } = useFetch("http://localhost:1337/api/posts");
+  console.log(data);
   return (
     <div className="order-1">
       {/* {functions.getSlideImages()} */}
@@ -116,8 +109,8 @@ export default function Main() {
           </div>
         </div>
         <div className="part-three">
-          {news?.map((data: News) => (
-            <SingleNews {...data} key={data.body} />
+          {data?.data.map((data: News) => (
+            <NewsCard key={data.id} {...data} />
           ))}
         </div>
         <div className="part-four">

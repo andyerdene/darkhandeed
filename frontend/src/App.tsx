@@ -8,6 +8,7 @@ import Prices from "./components/Prices";
 import Main from "./components/Main";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import SingleNews from "./components/SingleNews";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/prices" element={<Prices />} />
+        <Route path="/news/:id" element={<SingleNews />} />
       </Routes>
       <Footer />
     </div>
