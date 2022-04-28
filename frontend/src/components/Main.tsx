@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import mainPic from "../images/pictures/pic1.png";
 import "../style/main.css";
 import partTwoPic from "../images/pictures/part-two-pic.png";
@@ -6,7 +6,7 @@ import { Carousel } from "react-bootstrap";
 import { images } from "../services/otherServices";
 import { useNews } from "../contexts/NewsContext";
 import SingleNews from "./SingleNews";
-
+import { fetchService } from "../services/otherServices";
 interface News {
   title: string;
   body: string;
@@ -14,7 +14,8 @@ interface News {
 }
 
 export default function Main() {
-  const news = useNews();
+  // const news = useNews();
+  const [news, setNews] = useState([]);
 
   // useEffect(() => {
   //   functions.getSlideImages().then((e) => {
@@ -23,6 +24,9 @@ export default function Main() {
   // }, []);
   useEffect(() => {
     // functions.getAllNews().then((e) => setNews);
+    fetchService("http://localhost:1337/api/posts")
+      .then((response) => response.json())
+      .then((data) => setNews(data.data));
   }, []);
   return (
     <div className="order-1">

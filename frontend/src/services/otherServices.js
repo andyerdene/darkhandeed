@@ -25,3 +25,18 @@ export const images = {
     slideLogo: slideLogo,
   },
 };
+
+export const fetchService = async (url, method) => {
+  // switch (method) {
+  //   case "GET":
+
+  //   default:
+  //     // return await "";
+  return await fetch(url, {
+    method: method,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  // }
+};
