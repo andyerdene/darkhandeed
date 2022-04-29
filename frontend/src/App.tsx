@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
-import Services from "./components/Services";
+import NewsComponent from "./components/NewsComponent";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Prices from "./components/Prices";
@@ -19,7 +19,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/darkhandeed" element={<Main />} />
-        <Route path="/services" element={<Services />} />
+        <Route path="/news" element={<NewsComponent />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/prices" element={<Prices />} />

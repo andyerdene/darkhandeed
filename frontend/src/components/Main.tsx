@@ -4,26 +4,14 @@ import "../style/main.css";
 import partTwoPic from "../images/pictures/part-two-pic.png";
 import { Carousel } from "react-bootstrap";
 import { images } from "../services/otherServices";
-import { useNews } from "../contexts/NewsContext";
 import useFetch from "../customHooks/useFetch";
 import NewsCard from "./NewsCard";
-import SingleNews from "./SingleNews";
-import { fetchService } from "../services/otherServices";
-interface News {
-  id: number;
-  attribute: {
-    title: string;
-    body: string;
-    images: string[];
-  };
-}
+import { News } from "../types/fetch";
 
 export default function Main() {
   const { loading, error, data } = useFetch("http://localhost:1337/api/posts");
-  console.log(data);
   return (
     <div className="order-1">
-      {/* {functions.getSlideImages()} */}
       <div className="carausel order-1">
         <Carousel className="order-1">
           <Carousel.Item>
